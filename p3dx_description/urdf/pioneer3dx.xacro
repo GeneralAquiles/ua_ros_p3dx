@@ -32,19 +32,15 @@ work original in ucs-ros-pkg.
 	<link name="base_link">
 		<inertial>
 			<mass value="3.5" />
-			<!--<origin xyz="-0.025 0 -0.223"/> -->
 			<origin xyz="-0.05 0 0" />
 			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
 		</inertial>
 
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="-0.045 0 0.148" rpy="0 0 0" />
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p3dx_description/meshes/chassis.stl" />
 			</geometry>
-			<material name="ChassisRed">
-				<color rgba="0.851 0.0 0.0 1.0" />
-			</material>
 		</visual>
 
 		<collision>
@@ -63,15 +59,11 @@ work original in ucs-ros-pkg.
 			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
 		</inertial>
 
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<geometry name="top_geom">
 				<mesh filename="package://p3dx_description/meshes/top.stl" />
 			</geometry>
-
-			<material name="TopBlack">
-				<color rgba="0.038 0.038 0.038 1.0" />
-			</material>
 		</visual>
 
 		<collision>
@@ -96,20 +88,17 @@ work original in ucs-ros-pkg.
 			<inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
 		</inertial>
 
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p3dx_description/meshes/swivel.stl" />
 			</geometry>
-			<material name="swivel">
-				<color rgba="0.5 0.5 0.5 1" />
-			</material>
 		</visual>
 
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<geometry>
-				<box size="0 0 0" />
+				<box size="0.01 0.01 0.01" />
 			</geometry>
 		</collision>
 	</link>
@@ -133,20 +122,17 @@ work original in ucs-ros-pkg.
 				iyy="0.015218160428" iyz="-0.000004273467" izz="0.011763977943" />
 		</inertial>
 
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p3dx_description/meshes/center_hubcap.stl" />
 			</geometry>
-			<material name="swivel">
-				<color rgba="0.5 0.5 0.5 1" />
-			</material>
 		</visual>
 
 		<collision>
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<geometry>
-				<box size="0 0 0" />
+				<box size="0.01 0.01 0.01" />
 			</geometry>
 		</collision>
 	</link>
@@ -170,14 +156,11 @@ work original in ucs-ros-pkg.
 				iyy="0.015218160428" iyz="-0.000004273467" izz="0.011763977943" />
 		</inertial>
 
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p3dx_description/meshes/center_wheel.stl" />
 			</geometry>
-			<material name="WheelBlack">
-				<color rgba="0.117 0.117 0.117 1" />
-			</material>
 		</visual>
 
 		<collision>
@@ -205,20 +188,17 @@ work original in ucs-ros-pkg.
 			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
 		</inertial>
 		
-		<visual name="front_sonar_vis">
+		<visual>
 			<origin rpy="0 0 0" xyz="0 0 0" />
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p3dx_description/meshes/front_sonar.stl" />
 			</geometry>
-			<material name="SonarYellow">
-				<color rgba="0.715 0.583 0.210 1.0" />
-			</material>
 		</visual>
 		
 		<collision>
 			<origin rpy="0 0 0" xyz="0 0 0" />
 			<geometry>
-				<box size="0 0 0" />
+				<box size="0.01 0.01 0.01" />
 			</geometry>
 		</collision>
 	</link>
@@ -232,7 +212,7 @@ work original in ucs-ros-pkg.
 	<!-- lms100 laser -->
 	<link name="lms100">
 		<inertial>
-			<mass value="1e-5" />
+			<mass value="0.16" />
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
 		</inertial>
@@ -254,9 +234,44 @@ work original in ucs-ros-pkg.
 
 	<joint name="lms100_joint" type="fixed">
 		<axis xyz="0 1 0" />
-		<origin xyz="0.16 0 0.15" rpy="0 0 0" />
+		<origin xyz="0.10 0 0.272" rpy="0 0 0" />
 		<parent link="base_link" />
 		<child link="lms100" />
 	</joint>
+
+
+
+	<!-- Camera -->
+	<link name="camera_link">
+
+	  <collision>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+		    <geometry>
+		  	<box size="0.05 0.05 0.05"/>
+		    </geometry>
+	  </collision>
+
+	  <visual>
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+		    <geometry>
+		 	<box size="0.05 0.05 0.05"/>
+		    </geometry>
+		    <material name="red"/>
+	  </visual>
+
+	  <inertial>
+		    <mass value="1e-5" />
+		    <origin xyz="0 0 0" rpy="0 0 0"/>
+		    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+	  </inertial>
+	</link>
+
+	<joint name="camera_joint" type="fixed">
+	  <axis xyz="0 1 0" />
+	  <origin xyz="0 0 1" rpy="0 0 0"/>
+	  <parent link="base_link"/>
+	  <child link="camera_link"/>
+	</joint>
+
 
 </robot>

@@ -32,36 +32,78 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <!-- base_link -->
 	<gazebo reference="base_link">
-		<material>Gazebo/Red</material>
+		<visual>  
+		    <material>  
+		      <ambient>0.851 0.0 0.0 1.0</ambient>  
+		      <diffuse>0.0 0.0 0.0 1.0</diffuse>  
+		      <specular>0.0 0.0 0.0 128</specular>  
+		      <emissive>0.0 0.0 0.0 1.0</emissive>  
+		    </material>  
+		  </visual> 
 	</gazebo>
 
   <!-- top_plate -->
   <gazebo reference="top_plate">
-    <material>Gazebo/Black</material>
+    <visual>  
+	<material>  
+		<ambient>0.04 0.04 0.04 1.0</ambient>  
+		<diffuse>0.0 0.0 0.0 1.0</diffuse>  
+		<specular>0.0 0.0 0.0 128</specular>  
+		<emissive>0.0 0.0 0.0 1.0</emissive>
+	</material>  
+    </visual>
   </gazebo>
   
   <!-- swivel -->
   <gazebo reference="swivel">
-    <material>Gazebo/Grey</material>
+    <visual>  
+	<material>  
+		<ambient>0.5 0.5 0.5 1.0</ambient>  
+		<diffuse>0.0 0.0 0.0 1.0</diffuse>  
+		<specular>0.0 0.0 0.0 128</specular>  
+		<emissive>0.0 0.0 0.0 1.0</emissive>
+	</material>  
+    </visual>
   </gazebo>
   
   <!-- center_hubcap -->
-	<gazebo reference="center_hubcap">
-		<material>Gazebo/Grey</material>
-	</gazebo>
+  <gazebo reference="center_hubcap">
+    <visual>  
+	<material>  
+		<ambient>0.5 0.5 0.5 1.0</ambient>  
+		<diffuse>0.0 0.0 0.0 1.0</diffuse>  
+		<specular>0.0 0.0 0.0 128</specular>  
+		<emissive>0.0 0.0 0.0 1.0</emissive>
+	</material>  
+    </visual>
+  </gazebo>
   
   <!-- center_wheel -->
-	<gazebo reference="center_wheel">
-		<material>Gazebo/Black</material>
-		<mu1>10.0</mu1>
-		<mu2>10.0</mu2>
-		<kp>1000000.0</kp>
-		<kd>1.0</kd>
-	</gazebo>
+  <gazebo reference="center_wheel">
+    <visual>  
+	<material>  
+		<ambient>0.017 0.017 0.017 1.0</ambient>  
+		<diffuse>0.0 0.0 0.0 1.0</diffuse>  
+		<specular>0.0 0.0 0.0 128</specular>  
+		<emissive>0.0 0.0 0.0 1.0</emissive>
+	</material>
+    </visual>
+	<mu1>10.0</mu1>
+	<mu2>10.0</mu2>
+	<kp>1000000.0</kp>
+	<kd>1.0</kd>
+  </gazebo>
   
   <!-- front_sonar -->  
   <gazebo reference="front_sonar">
-    <material value="Gazebo/Yellow" />
+   <visual>  
+	<material>  
+		<ambient>0.715 0.583 0.210 1.0</ambient>  
+		<diffuse>0.0 0.0 0.0 1.0</diffuse>  
+		<specular>0.0 0.0 0.0 128</specular>  
+		<emissive>0.0 0.0 0.0 1.0</emissive>
+	</material>  
+    </visual>
   </gazebo>
 
   <!-- differential drive -->
@@ -69,11 +111,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
 			<alwaysOn>true</alwaysOn>
 			<updateRate>100</updateRate>
-			<leftJoint>base_right_wheel_joint</leftJoint>
-			<rightJoint>base_left_wheel_joint</rightJoint>
+			<leftJoint>base_left_wheel_joint</leftJoint>
+			<rightJoint>base_right_wheel_joint</rightJoint>
 			<wheelSeparation>0.39</wheelSeparation>
 			<wheelDiameter>0.15</wheelDiameter>
 			<torque>5</torque>
+			<legacyMode>false</legacyMode>
 			<commandTopic>${ns}/cmd_vel</commandTopic>
 			<odometryTopic>${ns}/odom</odometryTopic>
 			<odometryFrame>odom</odometryFrame>
@@ -100,20 +143,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<gazebo reference="lms100">
 		<sensor type="ray" name="head_hokuyo_sensor">
 			<pose>0 0 0 0 0 0</pose>
-			<visualize>false</visualize>
-			<update_rate>50</update_rate>
+			<visualize>true</visualize>
+			<update_rate>100</update_rate>
 			<ray>
 				<scan>
 					<horizontal>
-						<samples>360</samples>
+						<samples>681</samples>
 						<resolution>1</resolution>
-						<min_angle>-1.570796</min_angle>
-						<max_angle>1.570796</max_angle>
+						<min_angle>-2.094395</min_angle>
+						<max_angle>2.094395</max_angle>
 					</horizontal>
 				</scan>
 				<range>
-					<min>0.10</min>
-					<max>30.0</max>
+					<min>0.20</min>
+					<max>5.6</max>
 					<resolution>0.01</resolution>
 				</range>
 				<noise>
@@ -131,5 +174,55 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			</plugin>
 		</sensor>
 	</gazebo>
-  
+
+<!-- camera -->
+	<gazebo reference="camera_link">
+	  <visual>  
+		<material>  
+			<ambient>0.5 0.5 0.5 1.0</ambient>  
+			<diffuse>0.0 0.0 0.0 1.0</diffuse>  
+			<specular>0.0 0.0 0.0 128</specular>  
+			<emissive>0.0 0.0 0.0 1.0</emissive>
+		</material>  
+	  </visual>
+
+	  <sensor type="camera" name="camera1">
+	    <update_rate>30.0</update_rate>
+	    <camera name="head">
+		<horizontal_fov>1.3962634</horizontal_fov>
+		<image>
+			<width>800</width>
+			<height>800</height>
+			<format>R8G8B8</format>
+		</image>
+		<clip>
+			<near>0.02</near>
+			 <far>300</far>
+		</clip>
+		<noise>
+		  <type>gaussian</type>
+		  <!-- Noise is sampled independently per pixel on each frame.
+		       That pixel's noise value is added to each of its color
+		       channels, which at that point lie in the range [0,1]. -->
+		  <mean>0.0</mean>
+		  <stddev>0.007</stddev>
+		</noise>
+	    </camera>
+
+	    <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+		<alwaysOn>true</alwaysOn>
+		<updateRate>0.0</updateRate>
+		<cameraName>rrbot/camera1</cameraName>
+		<imageTopicName>image_raw</imageTopicName>
+		<cameraInfoTopicName>camera_info</cameraInfoTopicName>
+		<frameName>camera_link</frameName>
+		<hackBaseline>0.07</hackBaseline>
+		<distortionK1>0.0</distortionK1>
+		<distortionK2>0.0</distortionK2>
+		<distortionK3>0.0</distortionK3>
+		<distortionT1>0.0</distortionT1>
+		<distortionT2>0.0</distortionT2>
+	    </plugin>
+	  </sensor>
+	</gazebo>
 </robot>

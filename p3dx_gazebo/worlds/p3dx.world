@@ -1,17 +1,639 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
-  <world name="default">
-    <!-- A global light source -->
-    <include>
-      <uri>model://sun</uri>
-    </include>
-    <!-- A ground plane -->
-    <include>
-      <uri>model://ground_plane</uri>
-    </include>
-    <!-- The Willow Garaga offices -->
-    <include>
-      <uri>model://willowgarage</uri>
-    </include>
+	<world name="default">
+	<!-- A global light source -->
+	<include>
+		<uri>model://sun</uri>
+	</include>
+	<!-- A ground plane -->
+	<include>
+		<uri>model://ground_plane</uri>
+	</include>
+	<include>
+		<uri>model://ETSII</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_cant_mes</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_doors</uri>
+	</include>
+
+<!-- SECRETARIA -->
+	<!-- Mesas secretaria-->
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk1</name>
+		<pose>-7 3 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk2</name>
+		<pose>-9 3 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk3</name>
+		<pose>-13 3 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk4</name>
+		<pose>-9 5.5 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk5</name>
+		<pose>-12 5.5 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk6</name>
+		<pose>-13 2.5 0.1 0 0 1.5</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk7</name>
+		<pose>-8.5 1.7 0.1 0 0 -1.55</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk8</name>
+		<pose>-16.3 -2.2 0.1 0 0 1.6</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk9</name>
+		<pose>-16 3 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk10</name>
+		<pose>-18 3 0.1 0 0 0</pose>
+	</include>
+
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk11</name>
+		<pose>-16 5.5 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk12</name>
+		<pose>-18 5.5 0.1 0 0 0</pose>
+	</include>
+
+<!-- sillas secretaria-->
+	<include>
+		<uri>model://office_chair</uri>
+		<name>ofch_1</name>
+		<pose>-7 -2.3 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://office_chair</uri>
+		<name>ofch_2</name>
+		<pose>-9 -2.5 0.1 0 0 3.6</pose>
+	</include>
+	<include>
+		<uri>model://office_chair</uri>
+		<name>ofch_3</name>
+		<pose>-9.3 1.5 0.1 0 0 0.86</pose>
+	</include>
+	<include>
+		<uri>model://office_chair</uri>
+		<name>ofch_4</name>
+		<pose>-12 1.5 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://office_chair</uri>
+		<name>ofch_5</name>
+		<pose>-13 -2 0.1 0 0 3.14</pose>
+	</include>
+
+
+<!-- archivadores secretaria-->
+	<include>
+		<uri>model://file_cabinet_large</uri>
+		<name>flcb_1</name>
+		<pose>-15 -2.5 0.1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://file_cabinet_large</uri>
+		<name>flcb_2</name>
+		<pose>-15 -3 0.1 0 0 3.14</pose>
+	</include>
+
+	<!--ordenadores-->	
+	<include>
+		<uri>model://monitor_1</uri>
+		<name>sec_monit_1</name>
+		<pose>-7.5 -1.5 0.85 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://monitor_1</uri>
+		<name>sec_monit_2</name>
+		<pose>-9.5 -1.5 0.85 0 0 1</pose>
+	</include>
+	<include>
+		<uri>model://monitor_1</uri>
+		<name>sec_monit_3</name>
+		<pose>-8.5 1 0.85 0 0 -1</pose>
+	</include>
+
+
+<!-- sillas entrada-->
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_1</name>
+		<pose>-4 -1.5 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_2</name>
+		<pose>-3.5 -1.5 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_3</name>
+		<pose>-3 -1.5 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_4</name>
+		<pose>-2.5 -1.5 0.1 0 0 3.14</pose>
+	</include>
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_5</name>
+		<pose>-4 -3 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_6</name>
+		<pose>-3.5 -3 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_7</name>
+		<pose>-3 -3 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_8</name>
+		<pose>-2.5 -3 0.1 0 0 3.14</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_9</name>
+		<pose>-4 -0 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_10</name>
+		<pose>-3.5 -0 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_11</name>
+		<pose>-3 -0 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_12</name>
+		<pose>-2.5 -0 0.1 0 0 3.14</pose>
+	</include>
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_13</name>
+		<pose>-5 -0.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_14</name>
+		<pose>-5 -1 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_15</name>
+		<pose>-5 -1.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_16</name>
+		<pose>-5 -2 0.1 0 0 1.57</pose>
+	</include>
+
+
+<!-- AULA MULTIUSOS -->
+	<include>
+		<uri>model://ETSII_pb1_light</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_pb1_blackboard</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_pb1_proyector_floor</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_pb1_proyector_roof</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_pb1_white_table</uri>
+	</include>
+
+	<!-- mesas multiusos-->
+
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_1</name>
+		<pose>12.7 -2.7 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_2</name>
+		<pose>12.7 -1.2 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_3</name>
+		<pose>12.7 1.75 -0.2 0 0 1.57</pose>
+	</include>
+
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_4</name>
+		<pose>15.2 -2.7 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_5</name>
+		<pose>15.2 -1.2 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_6</name>
+		<pose>15.2 1.75 -0.2 0 0 1.57</pose>
+	</include>
+
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_7</name>
+		<pose>17.7 -2.7 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_8</name>
+		<pose>17.7 -1.2 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_9</name>
+		<pose>17.7 1.75 -0.2 0 0 1.57</pose>
+	</include>
+
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_10</name>
+		<pose>20.2 -2.7 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_11</name>
+		<pose>20.2 -1.2 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_12</name>
+		<pose>20.2 1.75 -0.2 0 0 1.57</pose>
+	</include>
+
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_13</name>
+		<pose>10.2 -1.2 -0.2 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://table</uri>
+		<name>Tb_14</name>
+		<pose>10.2 -2.7 -0.2 0 0 1.57</pose>
+	</include>
+
+<!-- Sillas multiusos-->
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_17</name>
+		<pose>12.5 -3 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_18</name>
+		<pose>12.5 -2.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_19</name>
+		<pose>12.5 -1.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_20</name>
+		<pose>12.5 -0.8 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_21</name>
+		<pose>12.5 1.75 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_22</name>
+		<pose>12.5 2.25 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_23</name>
+		<pose>15 -3 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_24</name>
+		<pose>15 -2.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_25</name>
+		<pose>15 -1.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_26</name>
+		<pose>15 -0.8 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_27</name>
+		<pose>15 1.75 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_28</name>
+		<pose>15 2.25 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_29</name>
+		<pose>17.5 -3 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_30</name>
+		<pose>17.5 -2.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_31</name>
+		<pose>17.5 -1.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_32</name>
+		<pose>17.5 -0.8 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_33</name>
+		<pose>17.5 1.75 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_34</name>
+		<pose>17.5 2.25 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_35</name>
+		<pose>20 -3 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>Tb_10</name>
+		<pose>20 -2.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_36</name>
+		<pose>20 -1.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_37</name>
+		<pose>20 -0.8 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_38</name>
+		<pose>20 1.75 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_39</name>
+		<pose>20 2.25 0.1 0 0 1.57</pose>
+	</include>
+
+
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_40</name>
+		<pose>10 -3 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_41</name>
+		<pose>10 -2.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_42</name>
+		<pose>10 -1.5 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://chair_2</uri>
+		<name>ch_43</name>
+		<pose>10 -0.8 0.1 0 0 1.57</pose>
+	</include>
+
+
+
+<!-- Despacho -->
+	<include>
+		<uri>model://office_chair</uri>
+		<name>ofch_10</name>
+		<pose>-56 14.5 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://desk_brown</uri>
+		<name>desk13</name>
+		<pose>-56 10.5 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://bookshelf_large</uri>
+		<name>bkslf_1</name>
+		<pose>-55.8 13.8 0.1 0 0 3.14</pose>
+	</include>
+	<include>
+		<uri>model://bookshelf_large</uri>
+		<name>bkslf_2</name>
+		<pose>-53.6 15.5 0.1 0 0 -1.57</pose>
+	</include>
+	<include>
+		<uri>model://file_cabinet_large</uri>
+		<name>flcb_3</name>
+		<pose>-57.2 13.8 0.1 0 0 1.57</pose>
+	</include>
+	<include>
+		<uri>model://file_cabinet_large</uri>
+		<name>flcb_3</name>
+		<pose>-57.7 13.8 0.1 0 0 1.57</pose>
+	</include>
+
+<!-- Cantina -->
+	<include>
+		<uri>model://ETSII_cant_sill</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_cant_barr</uri>
+	</include>
+	<include>
+		<uri>model://ETSII_cant_mostr</uri>
+	</include>
+
+	<include>
+		<uri>model://coffee_machine</uri>
+		<name>obj_cant_1</name>
+		<pose>-11 69.2 1.25 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://coca_cola</uri>
+		<name>obj_cant_2</name>
+		<pose>-6 70 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://coca_cola</uri>
+		<name>obj_cant_3</name>
+		<pose>-6 69.5 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://cup_blue</uri>
+		<name>obj_cant_4</name>
+		<pose>-5.7 69.6 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://plate_1</uri>
+		<name>obj_cant_5</name>
+		<pose>-5.5 69.5 1 0 0 0</pose>
+	</include>
+
+	<include>
+		<uri>model://coca_cola</uri>
+		<name>obj_cant_6</name>
+		<pose>-6 72 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://coca_cola</uri>
+		<name>obj_cant_7</name>
+		<pose>-6 71.5 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://cup_blue</uri>
+		<name>obj_cant_8</name>
+		<pose>-5.7 71.6 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://plate_1</uri>
+		<name>obj_cant_9</name>
+		<pose>-5.5 71.5 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://plate_1</uri>
+		<name>obj_cant_10</name>
+		<pose>-6.4 71.5 1 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://plate_1</uri>
+		<name>obj_cant_11</name>
+		<pose>-6.35 72 1 0 0 0</pose>
+	</include>
+
+	<include>
+		<uri>model://plate_1</uri>
+		<name>obj_cant_12</name>
+		<pose>-10.25 71.2 1.25 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://plate_1</uri>
+		<name>obj_cant_13</name>
+		<pose>-10.25 71.5 1.25 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://bottle_beer</uri>
+		<name>obj_cant_13</name>
+		<pose>-10.35 71.8 1.25 0 0 0</pose>
+	</include>
+
+	<light type="point" name="roof_light_0">
+            <pose>4 1 4.5 0 0 0</pose>
+            <diffuse>100 100 100 255</diffuse>
+            <specular>25 25 25 255</specular>
+            <attenuation>
+                <range>20</range>
+		<linear>0.15</linear>
+		<constant>0.5</constant>
+		<quadratic>0.001</quadratic>
+	    </attenuation>
+            <cast_shadows>true</cast_shadows>
+        </light>
+	<light type="point" name="roof_light_1">
+            <pose>10 0 4.5 0 0 0</pose>
+            <diffuse>100 100 100 255</diffuse>
+            <specular>25 25 25 255</specular>
+            <attenuation>
+                <range>20</range>
+		<linear>0.15</linear>
+		<constant>0.5</constant>
+		<quadratic>0.001</quadratic>
+	    </attenuation>
+            <cast_shadows>true</cast_shadows>
+        </light>
+	<light type="point" name="roof_light_2">
+            <pose>15 0 4.5 0 0 0</pose>
+            <diffuse>100 100 100 255</diffuse>
+            <specular>25 25 25 255</specular>
+            <attenuation>
+                <range>20</range>
+		<linear>0.1</linear>
+		<constant>0.5</constant>
+		<quadratic>0.001</quadratic>
+	    </attenuation>
+            <cast_shadows>true</cast_shadows>
+        </light>
   </world>
 </sdf>
